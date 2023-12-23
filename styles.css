@@ -80,21 +80,24 @@ body {
 
 label {
 	width: 40px;
-	height: 24px;
+	height: 20px;
 	position: relative;
 	display: block;
-	background: #ebebeb;
+	background: linear-gradient(180deg, #4f2ee8 0%, #dcdcdc 100%);
+	/* kolorystyka ściągnieta bezpośrednio z figma */
+	box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.1) inset; /* kolorystyka ściągnieta bezpośrednio z figma */
 	border-radius: 200px;
-	box-shadow: inset 0px 5px 15px var(--violet), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
 	cursor: pointer;
 }
 
 label:after {
 	content: "";
-	width: 24px;
-	height: 24px;
+	width: 18px;
+	height: 18px;
 	position: absolute;
-	background: linear-gradient(180deg, #ffcc89, #d8860b);
+	top: 1px;
+	left: 1px;
+	background: rgba(247, 247, 247, 1);
 	border-radius: 180px;
 	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
@@ -110,13 +113,17 @@ input {
 }
 
 input:checked + label {
-	background: #242424;
+	background: linear-gradient(180deg, #4f2ee8 0%, #686868 100%);
+	box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.1) inset;
+	/* kolorystyka ściągnieta bezpośrednio z figma */
 }
+
 input:checked + label:after {
 	right: 24px;
-	transform: translateX(100%);
-	background: 
+	transform: translateX(110%);
+	background: rgba(255, 255, 255, 1), rgba(247, 247, 247, 1);
 }
+
 label,
 label:after {
 	transition: 0.3s;
